@@ -1,0 +1,40 @@
+### 本地账单数据（含个人隐私，禁止提交到任何仓库） ###
+data/
+*.xlsx
+*.xls
+
+### 脱敏后的示例数据（可提交，供他人复现） ###
+!sample/
+!sample/*.xlsx
+
+### IntelliJ IDEA ###
+.idea/
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.kotlin
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
