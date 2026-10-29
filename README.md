@@ -43,6 +43,18 @@ java -cp out Bill.MyBill out/test-100000.xlsx --detail
 java -cp out Bill.MyBill "data/bill.xlsx" --detail
 ```
 
+## 在 IntelliJ IDEA 中打开
+
+1. `File → Open`，选择**项目根目录**（含 `pom.xml` 的那一级），不要选 `src`
+2. `Project Structure → Project SDK` 选 **JDK 21 或更高**（项目用到 record、switch 表达式、文本块等特性）
+3. 构建方式二选一：
+   - **Maven**：右下角出现 `Load Maven Project` 提示时点击加载，之后可用 Maven 面板执行 `package`
+   - **不用 Maven**：`Project Structure → Modules → Sources` 把 `src` 标记为 Sources Root，直接运行 `Bill.MyBill`
+4. **必须改一处**：`Run → Edit Configurations → Working directory` 设为**项目根目录**。
+   否则 `out/` 与 `data/` 的相对路径会解析到错误位置——这是"代码没错但跑不起来"最常见的原因
+
+若 IDEA 未自动识别 Git，在 `Settings → Version Control → Git → Path to Git executable` 指定 `git.exe` 的完整路径即可（使用便携版 Git 时，指向其 `cmd/git.exe`）。
+
 ## 命令行选项
 
 | 选项 | 说明 |
